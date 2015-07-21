@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SpiritGames</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+<body>
+  <div class="navbar-wrapper">
+      <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Spirit</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav pull-right" style="">
+                <li role="presentation"><%= link_to "Home", root_path %></li>
+                <li role="presentation"><%= link_to "Games", games_path %></li>
+                <li role="presentation"><%= link_to "About", about_index_path %></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </div>
+  </div>
+<div class="container">
+  <%= yield %>
+</div>
+  <footer class="footer" style="padding-bottom: 20px">
+      <div class="container">
+        <p class="text-muted">Spirit Games Ltd<br>
+        Launch Academy<br>
+        Vancouver<br>
+        email: spiritmobilegame@gmail.com </p>
+      </div>
+  </footer>
+</body>
+</html>
+ 
